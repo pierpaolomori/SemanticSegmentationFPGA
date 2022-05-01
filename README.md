@@ -26,7 +26,7 @@ baseline DeepLabV3+ model, evaluated on an Arria-10 FPGA.
 </div>
 
 <div style="text-align: center;">
-    <img src="img/new_input_raw.png" alt="raw">
+    <img src="./img/new_input_raw.png" alt="raw">
     <figcaption>Sample image from CityScapes dataset</figcaption>
 </div>
 
@@ -37,11 +37,11 @@ baseline DeepLabV3+ model, evaluated on an Arria-10 FPGA.
 
 <div style = "display: flex; justify-content: center;">
   <div style="text-align: center;">
-    <img style = "display: inline-block" src = "img/new_seg_vanilla.png" alt="vanilla">
+    <img style = "display: inline-block" src = "./img/new_seg_vanilla.png" alt="vanilla">
      <figcaption>Segmented output from DeepLabV3+ <b>vanilla</b> model on Arria10 FPGA (Latency=1.6 sec, mIOU=67.27%)</figcaption>
 </div>
 <div style="text-align: center;margin: 0 1rem;">
-    <img style = "display: inline-block" src = "img/new_seg_prune.png" alt="prune">
+    <img style = "display: inline-block" src = "./img/new_seg_prune.png" alt="prune">
      <figcaption>Segmented output from DeepLabV3+ <b>pruned</b> model on Arria10 FPGA (Latency=0.6 sec, mIOU=65.29%)</figcaption>
 </div>
 
@@ -50,14 +50,14 @@ baseline DeepLabV3+ model, evaluated on an Arria-10 FPGA.
 
 
 
-##Requirements
+## Requirements
 
 ---
  - python 3
  - Intel OpenCL SDK 19.4
  - Intel Arria-10 GX FPGA board
 
-###Preparation
+### Preparation
 
 FPGA binary files can be downloaded from [google-drive](https://drive.google.com/drive/folders/10hMgnNJ86kHN9XwR_Kgh511m3JhoE9xo?usp=sharing).
 Please place the binary configuration downloaded in the <b>FPGA_binaries</b> folder.
@@ -66,7 +66,7 @@ Please place the binary configuration downloaded in the <b>FPGA_binaries</b> fol
 
 Set environment variables for Intel OpenCL SDK.
 
-###Usage
+### Usage
 Run `python main.py [OPTIONS]` to run inference of DeepLabV3+ by flashing FPGA binary file.
 
  `OPTIONS:`
