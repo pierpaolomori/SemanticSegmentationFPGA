@@ -1,0 +1,166 @@
+kernel_file_name: FPGA_Binaries/16_16_4/F4_3.aocx
+
+input_data_folder: Quantized_16bit_imgs/
+
+seg_output: Segmentation/
+
+weight_file_path: weights/pruned_weights.dat
+
+reference_output_data_folder: /home/saptarshi/FPGA_CityScape/18_precision16_fullcheckpoint_conv3plus_prediction_dummyBNparam_forASPP/activations/145_Student_prediction_BiasAdd0.dat
+
+results_file: /home/saptarshi/FPGA_ImageNet/activations/result.txt
+
+num_img: 5
+
+show_seg: 1
+
+configLayer:
+  layer_0:
+    tiling_factor_ox: 80
+    tiling_factor_oy: 1
+  #Res2_1
+  layer_1:
+    tiling_factor_ox: 10
+    tiling_factor_oy: 10
+  layer_2:
+    tiling_factor_ox: 10
+    tiling_factor_oy: 10
+  #Res2_2
+  layer_3: #conv2_2_0
+    tiling_factor_ox: 10
+    tiling_factor_oy: 10
+  layer_4: #conv2_2
+    tiling_factor_ox: 10
+    tiling_factor_oy: 10
+  #Res3_1
+  layer_5:
+    tiling_factor_ox: 10
+    tiling_factor_oy: 10
+
+  layer_6:
+    tiling_factor_ox: 10
+    tiling_factor_oy: 10
+  layer_7:
+    tiling_factor_ox: 10
+    tiling_factor_oy: 10
+  #Res3_2
+  layer_8:
+    tiling_factor_ox: 10
+    tiling_factor_oy: 10
+  layer_9:
+    tiling_factor_ox: 10
+    tiling_factor_oy: 10
+  #Res4_1
+  layer_10:
+    tiling_factor_ox: 10
+    tiling_factor_oy: 10
+
+  layer_11:
+    tiling_factor_ox: 10
+    tiling_factor_oy: 10
+  layer_12:
+    tiling_factor_ox: 10
+    tiling_factor_oy: 10
+  #Res4_2
+  layer_13:
+    tiling_factor_ox: 10
+    tiling_factor_oy: 10
+  layer_14:
+    tiling_factor_ox: 10
+    tiling_factor_oy: 10
+  #Res5_1
+  layer_15:
+    tiling_factor_ox: 10
+    tiling_factor_oy: 10
+  layer_16:
+    tiling_factor_ox: 1
+    tiling_factor_oy: 1
+  layer_17:
+    tiling_factor_ox: 1
+    tiling_factor_oy: 1
+  #Res5_2
+  layer_18:
+    tiling_factor_ox: 1
+    tiling_factor_oy: 1
+  layer_19:
+    tiling_factor_ox: 1
+    tiling_factor_oy: 1
+  #ASPP1
+  layer_20:
+    tiling_factor_ox: 10
+    tiling_factor_oy: 10
+  #Decoder4_1
+  layer_21:
+    tiling_factor_ox: 10
+    tiling_factor_oy: 10
+  #ASPP2
+  layer_22:
+    tiling_factor_ox: 1
+    tiling_factor_oy: 1
+  #Decoder4_2
+  layer_23:
+    tiling_factor_ox: 10
+    tiling_factor_oy: 10
+#  #Decoder4_2, for pruned 50ops
+#  layer_23:
+#    tiling_factor_ox: 12
+#    tiling_factor_oy: 12
+  #ASPP3
+  layer_24:
+    tiling_factor_ox: 1
+    tiling_factor_oy: 1
+  #Decoder4_3
+  layer_25:
+    tiling_factor_ox: 10
+    tiling_factor_oy: 10
+  #ASPP4
+  layer_26:
+    tiling_factor_ox: 1
+    tiling_factor_oy: 1
+  #Decoder4_4
+  layer_27:
+    tiling_factor_ox: 10
+    tiling_factor_oy: 10
+  #ASPP5_Average
+  layer_28:
+    tiling_factor_ox: 1
+    tiling_factor_oy: 1
+  #ASPP5_Conv
+  layer_29:
+    tiling_factor_ox: 1
+    tiling_factor_oy: 1
+  #ASPP5_Upsample
+  layer_30:
+    tiling_factor_ox: 1
+    tiling_factor_oy: 1
+  #Decoder4_5
+  layer_31:
+    tiling_factor_ox: 10
+    tiling_factor_oy: 10
+  #Upsample_Decoder4
+  layer_32:
+    tiling_factor_ox: 1
+    tiling_factor_oy: 1
+  #Conv2_1
+  layer_33:
+    tiling_factor_ox: 10
+    tiling_factor_oy: 10
+  #Decoder1
+  layer_34:
+    tiling_factor_ox: 10
+    tiling_factor_oy: 10
+  #Conv2_2
+  layer_35:
+    tiling_factor_ox: 10
+    tiling_factor_oy: 10
+  #Conv3
+  layer_36:
+    tiling_factor_ox: 10
+    tiling_factor_oy: 10
+  #Prediction
+  layer_37:
+    tiling_factor_ox: 10
+    tiling_factor_oy: 10
+
+
+
