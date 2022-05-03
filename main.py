@@ -30,19 +30,6 @@ def quantize(x, precision = 16):
     # print("sf = " + str(scaling_factor))
     return np.int16(np.round(x * scaling_factor ))
 
-# convert_to_bin = 0
-#
-# if convert_to_bin:
-#     png_path = '/home/cvadmin/Py_to_FPGA/raw_png'
-#     os.chdir(png_path)
-#     for filename in os.listdir(png_path):
-#         if filename.endswith(".png"):
-#             f_bin = open("../Quantized_16bit_imgs/"+filename[:-3]+"dat", "wb")
-#             image = Image.open(filename)
-#             image_np = np.asarray(image)
-#             img_quant = quantize(image_np, 16)
-#             f_bin.write(img_quant.tobytes())
-#             f_bin.close()
 
 parser = argparse.ArgumentParser(description='List of parameters needed for model inference')
 parser.add_argument('-m', '--model', type=str, default="prune", help='model selection | vanilla | prune |')
