@@ -77,9 +77,25 @@ Run `python main.py [OPTIONS]` to run inference of DeepLabV3+ by flashing FPGA b
  - `-u, --unroll_conf` : Specify unrolling configuration to be used. Valid options are <b>16_16_1</b>, <b>16_16_4</b>, <b>16_32_1</b> and <b>16_32_4</b>. The default is <b>16_32_4</b>.
 
 [//]: # (##Citation)
----
 
-
-
-
+## Citation
+- - - 
+```
+@inproceedings{10.1145/3489517.3530424,
+author = {Mor\`{\i}, Pierpaolo and Vemparala, Manoj-Rohit and Fasfous, Nael and Mitra, Saptarshi and Sarkar, Sreetama and Frickenstein, Alexander and Frickenstein, Lukas and Helms, Domenik and Nagaraja, Naveen Shankar and Stechele, Walter and Passerone, Claudio},
+title = {Accelerating and Pruning CNNs for Semantic Segmentation on FPGA},
+year = {2022},
+isbn = {9781450391429},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3489517.3530424},
+doi = {10.1145/3489517.3530424},
+abstract = {Semantic segmentation is one of the popular tasks in computer vision, providing pixel-wise annotations for scene understanding. However, segmentation-based convolutional neural networks require tremendous computational power. In this work, a fully-pipelined hardware accelerator with support for dilated convolution is introduced, which cuts down the redundant zero multiplications. Furthermore, we propose a genetic algorithm based automated channel pruning technique to jointly optimize computational complexity and model accuracy. Finally, hardware heuristics and an accurate model of the custom accelerator design enable a hardware-aware pruning framework. We achieve 2.44X lower latency with minimal degradation in semantic prediction quality (−1.98 pp lower mean intersection over union) compared to the baseline DeepLabV3+ model, evaluated on an Arria-10 FPGA. The binary files of the FPGA design, baseline and pruned models can be found in github.com/pierpaolomori/SemanticSegmentationFPGA},
+booktitle = {Proceedings of the 59th ACM/IEEE Design Automation Conference},
+pages = {145–150},
+numpages = {6},
+location = {San Francisco, California},
+series = {DAC '22}
+}
+```
 [1]: https://arxiv.org/abs/1611.02450
